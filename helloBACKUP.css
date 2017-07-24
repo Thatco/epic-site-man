@@ -4,22 +4,42 @@ html {
 
 body {
   background-color: #7f4444;
-  height: 200%;
-  width: 200%;
-  display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
+  height: 100%;
+  overflow: hidden;
 }
 img {
   max-width: 100%;
   height: auto;
     width: auto\9; /* ie8 */
+    float:right;
 }
 
-#co {
+div[id$="co"] {
   align-items: center;
-  height: 200%;
+  /* height: 100%;*/
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 50%;
+  /*left: 50%;*/  /* remove to make width equal to screen */
+  margin-top: -50px;
+  /* margin-left: -100px; */
 }
+
+#top, #bottom, #left, #right {
+	background: #EEEEEE;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: .25em;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: .25em
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }

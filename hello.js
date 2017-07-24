@@ -31,10 +31,34 @@ function colorLuminance(hex, lum) {
 
 return rgb;
 }
+
+$(window).load(function() {
+    $('.marquee').marquee();
+
 $(document).ready(function() {
-  $('#rplimg').waterripple({onclick: true})
+
+  //$('.marquee').marquee({
+    //duration: 4000,
+    //startVisible: false
+  //});
+
+  $('#rplimg').waterripple({arbitrary: 0, onmove: true, onclick: true})
+
+    $("body").keypress(function() {
+
+      $("body").css("background-color", colorLuminance(getRandomColor(), getRandomDemical()));
+
+    });
+
   $("body").click(function() {
-    //$("body").css("background-color", getRandomColor());
+
     $("body").css("background-color", colorLuminance(getRandomColor(), getRandomDemical()));
+
   });
+
 });
+
+});
+
+
+//$("body").css("background-color", getRandomColor());
