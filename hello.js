@@ -1,3 +1,18 @@
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
 function getRandomDemical() {
   var demical = (Math.random() * (0.5 - 0.300) + 0.300).toFixed(1) * (-1)
   return demical;
@@ -32,10 +47,24 @@ function colorLuminance(hex, lum) {
 return rgb;
 }
 
+
+
 $(window).load(function() {
-    $('.marquee').marquee();
+
+    $('.marquee2').marquee({
+      duration: 5000,
+      direction: 'right'
+    });
+
+    $('.marqueeOld').marquee();
 
 $(document).ready(function() {
+
+  $(function() {
+      $( "#poke, #currentPoke" ).sortable({
+        connectWith: ".connectedSortable"
+      }).disableSelection();
+    } );
 
   //$('.marquee').marquee({
     //duration: 4000,

@@ -7,7 +7,7 @@ body {
   height: 100%;
   overflow: hidden;
 }
-img {
+#rplimg{
   max-width: 100%;
   height: auto;
     width: auto\9; /* ie8 */
@@ -32,6 +32,7 @@ div[id$="co"] {
 	}
 	#left, #right {
 		top: 0; bottom: 0;
+		/* width: 15em; */
 		width: .25em;
 		}
 		#left { left: 0; }
@@ -43,3 +44,51 @@ div[id$="co"] {
 		}
 		#top { top: 0; }
 		#bottom { bottom: 0; }
+
+div.marquee {
+  height: 200%
+}
+
+#throbble {
+   display: none
+ }
+#poke {
+  line-height: 200%;
+  margin-left: -3em;
+  list-style-type: none;
+}
+
+#currentPoke {
+  line-height: 200%;
+  margin-left: 20em;
+  margin-top: -41em;
+  list-style-type: none;
+}
+
+li {
+  font-size: 2em;
+  font-family: Arial Black;
+  font: Arial Black;
+  color: #eeeeee;
+  -webkit-text-stroke: 2px black
+}
+
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+#niga {
+    position: relative;
+}
+#niga img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: -.5em;
+}
+#skate {
+  margin-top: -12.7em;
+  margin-left: -7em;
+}
